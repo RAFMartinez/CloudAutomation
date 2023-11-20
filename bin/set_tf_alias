@@ -1,13 +1,2 @@
-# Check if the environment variable already exists
-if (-not (Test-Path Env:\TF_ALIAS)) {
-    # If the environment variable does not exist, set it
-    [Environment]::SetEnvironmentVariable("TF_ALIAS", "terraform", [EnvironmentVariableTarget]::User)
-    Write-Output "Alias added successfully."
-} else {
-    # Inform the user if the environment variable already exists
-    Write-Output "Alias already exists in environment variables."
-}
-
-# Optional: Refresh the environment to make the alias available immediately
-$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", [System.EnvironmentVariableTarget]::Machine)
-Write-Output "Environment refreshed."
+# Add the Terraform alias
+New-Alias -Name tf -Value terraform
