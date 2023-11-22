@@ -1,2 +1,11 @@
 # Add the Terraform alias
 New-Alias -Name tf -Value terraform
+
+
+
+
+# if you are using windows, this with allow you to use 'tf' instead of typing out terraform each time.
+
+
+
+

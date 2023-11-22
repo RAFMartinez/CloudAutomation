@@ -1,9 +1,10 @@
-/*the aws_iam_user and aws_iam_policy resources to create an IAM user and policy, and then use the aws_iam_user_policy_attachment resource to attach the policy to the user*/
+/*the aws_iam_user and aws_iam_policy resources are 
+to create an IAM user and policy, 
+and then use the aws_iam_user_policy_attachment resource to attach the policy to the user*/
 
 
 provider "aws" {
-  # Configure your AWS provider settings here
-  region = "us-east-1" # Change this to your desired region
+  region = "us-east-1" 
 }
 
 resource "aws_iam_user" "s3_read_only_user" {
